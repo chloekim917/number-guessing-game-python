@@ -8,13 +8,27 @@ if yorno.upper() == "YES":
     print(thenumb)
     i = int(input("Guess a number: "))
 
+count = 0
 while i != thenumb:
-    count = 0
+    if i < thenumb:
+        count = count+1
+        print(count)
+        i = int(input("Higher! Guess a new number: "))
+    elif i > thenumb:
+        count = count+1
+        print(count)
+        i = int(input("Lower! Guess a new number: "))
+print(f"Congrats! You got it right! It took you {count} tries")
+
+"""
+count = 0
+while i != thenumb:
     if i < thenumb:
         count+1
         i = int(input("Higher! Guess a new number: "))
     elif i > thenumb:
         count+1
+        print(count)
         i = int(input("Lower! Guess a new number: "))
-        
-print(f"Congrats! You got it right! It took you {count} tries")
+    print(f"Congrats! You got it right! It took you {count} tries")
+"""
